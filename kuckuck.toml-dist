@@ -1,0 +1,5 @@
+client_id = "<insert your client key here>"
+client_secret = "<insert your client secret here>"
+token = "<insert your token here>"
+base = "<insert your instance URL here>"
+redirect = "<insert your instance URL here>"
