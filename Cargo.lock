@@ -617,7 +617,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "kuckucksuhrtodon"
+name = "kuckucksuhr"
 version = "0.1.0"
 dependencies = [
  "chrono",

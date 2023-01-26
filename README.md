@@ -2,7 +2,7 @@
 
 [Kuckuck!](https://social.tchncs.de/@kuckucksuhr)
 
-(Dies ist die Mastodon-Version - die Kuckucksuhr fÃr Twitter findet ihr [hier.](https://code.rosaelefanten.org/kuckucksuhr)
+(Dies ist die Mastodon-Version - die Kuckucksuhr für Twitter findet ihr [hier.](https://code.rosaelefanten.org/kuckucksuhr))
 
 ## Kompilieren
 
