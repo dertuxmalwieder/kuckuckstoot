@@ -26,11 +26,12 @@ async fn main() -> Result<()> {
     let mastodon = if let Ok(data) = toml::from_file("kuckuck.toml") {
         Mastodon::from(data)
     } else {
-        // Probably WILL fail. Maybe it will help people read the README...
+        // Wird wahrscheinlich fehlschlagen. Lest halt das README...
         Mastodon::from(Data::default())
     };
 
-    // Aktuelle Stunde:
+    // Aktuelle Stunde (Local::now() ist auf manchen Systemen falsch, daher erzwungen
+    // Europe/Berlin):
     let stunde: DateTime<Tz> = Utc::now().with_timezone(&Berlin);
     let (_, stunde_12) = stunde.hour12();
     let stunde_usize = stunde_12 as usize;
