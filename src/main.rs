@@ -13,7 +13,9 @@
  * distribution.
  */
 
-use chrono::prelude::*;
+use chrono::{DateTime, Timelike, Utc};
+use chrono_tz::Tz;
+use chrono_tz::Europe::Berlin;
 use mastodon_async::helpers::toml;
 use mastodon_async::prelude::*;
 use mastodon_async::{Language, Result};
@@ -24,12 +26,14 @@ async fn main() -> Result<()> {
     let mastodon = if let Ok(data) = toml::from_file("kuckuck.toml") {
         Mastodon::from(data)
     } else {
+        // Probably WILL fail. Maybe it will help people read the README...
         Mastodon::from(Data::default())
     };
 
     // Aktuelle Stunde:
-    let (_, stunde) = Local::now().hour12();
-    let stunde_usize = stunde as usize;
+    let stunde: DateTime<Tz> = Utc::now().with_timezone(&Berlin);
+    let (_, stunde_12) = stunde.hour12();
+    let stunde_usize = stunde_12 as usize;
 
     let kuckuck_text = "Kuckuck! ".repeat(stunde_usize);
 
