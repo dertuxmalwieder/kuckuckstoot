@@ -1,6 +1,6 @@
 [package]
 name = "kuckucksuhr"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Cthulhux <git@tuxproject.de>"]
 edition = "2021"
 license = "CDDL-1.1"
@@ -8,6 +8,6 @@ license = "CDDL-1.1"
 [dependencies]
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 chrono = "0.4"
-chrono-tz = "0.6"
+chrono-tz = "0.8"
 rand = "0.8"
-mastodon-async = { version = "1.0.3", features = ["toml"] }
+mastodon-async = { version = "1", features = ["toml"] }

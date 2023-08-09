@@ -14,8 +14,8 @@
  */
 
 use chrono::{DateTime, Timelike, Utc};
-use chrono_tz::Tz;
 use chrono_tz::Europe::Berlin;
+use chrono_tz::Tz;
 use mastodon_async::helpers::toml;
 use mastodon_async::prelude::*;
 use mastodon_async::{Language, Result};
@@ -26,8 +26,7 @@ async fn main() -> Result<()> {
     let mastodon = if let Ok(data) = toml::from_file("kuckuck.toml") {
         Mastodon::from(data)
     } else {
-        // Wird wahrscheinlich fehlschlagen. Lest halt das README...
-        Mastodon::from(Data::default())
+        panic!("Die Kuckucksuhr wurde nicht richtig konfiguriert! Bitte die Hinweise im README befolgen.");
     };
 
     // Aktuelle Stunde (Local::now() ist auf manchen Systemen falsch, daher erzwungen
