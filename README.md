@@ -1,8 +1,6 @@
-# Die Kuckucksuhr
+# Die Kuckucksuhr (im Fediverse)
 
 [Kuckuck!](https://social.tchncs.de/@kuckucksuhr)
-
-(Dies ist die Mastodon-Version - die Kuckucksuhr für Twitter findet ihr [hier.](https://code.rosaelefanten.org/kuckucksuhr))
 
 ## Kompilieren
 
