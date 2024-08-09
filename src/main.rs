@@ -20,7 +20,7 @@ use mastodon_async::helpers::toml;
 use mastodon_async::prelude::*;
 use mastodon_async::{Language, Result};
 
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<()> {
     // Mastodon-Login:
     let mastodon = if let Ok(data) = toml::from_file("kuckuck.toml") {
